@@ -11,7 +11,7 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/listar', [MiControlador::class, 'listar']);
-Route::get('/listar/{dni}', [MiControlador::class,'listarPersona']);
-Route::get('/insertar', [MiControlador::class,'insertar']);
-Route::get('/updatear', [MiControlador::class,'updatear'] );
-Route::get('/deletear/{dni}', [MiControlador::class,'deletear']);
+Route::get('/listar/{dni}', [MiControlador::class, 'listarPersona']);
+Route::post('/insertar', [MiControlador::class, 'insertar']);
+Route::put('/updatear', [MiControlador::class, 'updatear']);
+Route::delete('/deletear/{dni}', [MiControlador::class, 'deletear']);
