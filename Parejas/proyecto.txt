@@ -21,3 +21,15 @@ Tablas:
 
 Ideas:
     Mostrar un array(auxiliar) vacio al Usuario, si acierta,cambiar esos huecos por el numero en concreto permanentemente, si falla volver a ponerlos vacios.
+
+
+Rutas:
+
+    GET:
+        /partida/{id} (Coge una partida si es el Usuario correcto, por body)
+        /partida (te devuelve tus partidas, con body del usuario por json)
+    POST:
+        /partida (Crea una partida con tu usuario por body)
+        /destapar/{num1}/{num2} (partida_id por body, 2 numeros por body para destapar ambas)
+    PATCH:
+        /rendirse? (por si el usuario quiere abandonar la partida, id_usuario, id_partida por body)
