@@ -1,0 +1,23 @@
+Tablas:
+    Partida(
+        ID,
+        Usuario_ID,
+        Casillas(Numero de casillas total)
+        Estado(Activa,perdida,ganada),
+        Intentos
+    )
+    Usuario(
+        ID,
+        Username,
+        Password
+    )
+    Casilla(
+        ID,
+        Partida_ID,
+        NumeroContenido(El numero que tendra esta casilla),
+        PosicionEnTablero,
+        DestapadaPermanente(un boolean que sea true cuando acierte y eso sea lo que compruebe una funcion para mostrarlas o no)
+    )
+
+Ideas:
+    Mostrar un array(auxiliar) vacio al Usuario, si acierta,cambiar esos huecos por el numero en concreto permanentemente, si falla volver a ponerlos vacios.
