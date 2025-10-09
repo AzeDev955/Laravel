@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Container\Attributes\DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
-class ControladorUsuario extends Controller
-{
-    public static function getUsuario(Request $id){
-        DB::table("usuario")->where("id",$id)->update([
-    }
+class ControladorUsuario
+{   //no es necesario
+    // public static function getUsuario($id)
+    // {
+    //     try {
+    //         $persona = DB::table("usuario")->where("id", $id)->first();
+    //         return $persona;
+    //     } catch (\Exception $e) {
+    //         return null;
+    //     }
+    // }
 }

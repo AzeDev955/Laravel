@@ -27,7 +27,7 @@ Ideas:
 Rutas:
 
     GET:
-        /partida/{id} (Coge una partida si es el Usuario correcto, por body)
+        /partida/{id_partida} (Coge una partida si es el Usuario correcto, por body)
         /partida (te devuelve tus partidas, con body del usuario por json)
     POST:
         /partida/{numeroCasillas} (Crea una partida con tu usuario por body)

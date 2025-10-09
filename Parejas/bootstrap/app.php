@@ -13,9 +13,7 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        $middleware->append(VerificarNumeroPar::class);
-        $middleware->alias(['par', VerificarNumeroPar::class]);
-        $middleware->appendToGroup('web', VerificarNumeroPar::class);
+        $middleware->alias(['par' => VerificarNumeroPar::class]);
         //
     })
     ->withExceptions(function (Exceptions $exceptions): void {
