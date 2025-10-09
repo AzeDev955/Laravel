@@ -12,4 +12,4 @@ Route::get('/user', function (Request $request) {
 Route::GET('/partida/{id}', [ControladorPartida::class, 'getPartida'])->whereNumber('id');
 Route::get('/partida', [ControladorPartida::class, 'getAllPartidas']);
 Route::post('/partida/{numeroCasillas} ', [ControladorPartida::class, 'crearPartida'])->middleware('par');
-Route::post('/destapar/{num1}/{num2}', [ControladorPartida::class, 'destaparCasilla'])->whereNumber(['num1', 'num2']);
+Route::post('/destapar/{partida_id}/{num1}/{num2}', [ControladorPartida::class, 'destaparCasilla'])->whereNumber(['num1', 'num2', 'id'])->middleware('casilla');

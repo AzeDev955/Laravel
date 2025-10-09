@@ -27,10 +27,10 @@ Ideas:
 Rutas:
 
     GET:
-        /partida/{id_partida} (Coge una partida si es el Usuario correcto, por body)
-        /partida (te devuelve tus partidas, con body del usuario por json)
+        /partida/{id_partida} (Coge una partida si es el Usuario correcto, por body) //
+        /partida (te devuelve tus partidas, con body del usuario por json) //
     POST:
-        /partida/{numeroCasillas} (Crea una partida con tu usuario por body)
+        /partida/{numeroCasillas} (Crea una partida con tu usuario por body) //
         /destapar/{num1}/{num2} (partida_id y Usuario_ID por body, para poder hacer control de errores por ruta)
     PATCH:
         /rendirse? (por si el usuario quiere abandonar la partida, id_usuario, id_partida por body)
