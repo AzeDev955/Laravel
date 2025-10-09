@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-10-2025 a las 13:32:13
+-- Tiempo de generación: 09-10-2025 a las 20:45:40
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -28,11 +28,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `casilla` (
-  `Id` int(5) NOT NULL,
-  `Partida_ID` int(5) NOT NULL,
-  `NumeroContenido` int(3) NOT NULL,
-  `PosicionEnTablero` int(3) NOT NULL,
-  `Destapada` tinyint(1) NOT NULL
+  `id` int(5) NOT NULL,
+  `partida_id` int(5) NOT NULL,
+  `numero_contenido` int(3) NOT NULL,
+  `posicion` int(3) NOT NULL,
+  `destapada` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -42,10 +42,10 @@ CREATE TABLE `casilla` (
 --
 
 CREATE TABLE `partida` (
-  `Id` int(10) NOT NULL,
-  `Usuario_ID` int(10) NOT NULL,
-  `Estado` varchar(50) NOT NULL,
-  `Intentos` int(5) NOT NULL
+  `id` int(10) NOT NULL,
+  `usuario_id` int(10) NOT NULL,
+  `estado` varchar(50) NOT NULL,
+  `intentos` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -55,9 +55,9 @@ CREATE TABLE `partida` (
 --
 
 CREATE TABLE `usuario` (
-  `Id` int(11) NOT NULL,
-  `Username` varchar(50) NOT NULL,
-  `Password` varchar(50) NOT NULL
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -68,21 +68,21 @@ CREATE TABLE `usuario` (
 -- Indices de la tabla `casilla`
 --
 ALTER TABLE `casilla`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Partida_ID` (`Partida_ID`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Partida_ID` (`partida_id`);
 
 --
 -- Indices de la tabla `partida`
 --
 ALTER TABLE `partida`
-  ADD PRIMARY KEY (`Id`),
-  ADD KEY `Usuario_ID` (`Usuario_ID`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Usuario_ID` (`usuario_id`);
 
 --
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -92,19 +92,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `casilla`
 --
 ALTER TABLE `casilla`
-  MODIFY `Id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `partida`
 --
 ALTER TABLE `partida`
-  MODIFY `Id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
